@@ -1,5 +1,6 @@
 #include <stdio.h>
-#define AGE_OF_JULIUS 10
+#include "Data_collection.c"
+#include "functions.c"
 
 int main(void){
     printf("Hello World!");
