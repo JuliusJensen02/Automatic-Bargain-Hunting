@@ -1,125 +1,125 @@
-Smør,75,Rema1000
-Mælk,9.5,Rema1000
-Yoghurt,15,Rema1000
-Æg,2.7,Rema1000
-Skiveost,103.87,Rema1000
-Pære,4,Rema1000
-Æble,2.25,Rema1000
-Hjertesalat,10,Rema1000
-Agurk,5,Rema1000
-Tomat,60,Rema1000
-Vaniljeis,40,Rema1000
-Fryseærter,15.67,Rema1000
-Rundstykker,16,Rema1000
-Isterninger,10,Rema1000
-Frysekartofler,16.67,Rema1000
-Medisterpølse,72.50,Rema1000
-Kyllingebryst,86.67,Rema1000
-Bacon,50,Rema1000
-Hakket oksekød,78,Rema1000
-Hakket svinekød,78,Rema1000
-Toiletpapir,28.11,Rema1000
-Rugbrød,25.64,Rema1000
-Pasta,9,Rema1000
-Havregryn,8,Rema1000
-Mel,6,Rema1000
-Smør,50,Føtex
-Mælk,10.5,Føtex
-Yoghurt,15.5,Føtex
-Æg,2,Føtex
-Skiveost,104.17,Føtex
-Pære,4.17,Føtex
-Æble,1.88,Føtex
-Hjertesalat,14,Føtex
-Agurk,8,Føtex
-Tomat,40,Føtex
-Vaniljeis,23.95,Føtex
-Fryseærter,17.14,Føtex
-Rundstykker,20,Føtex
-Isterninger,10,Føtex
-Frysekartofler,13.89,Føtex
-Medisterpølse,59,Føtex
-Kyllingebryst,93.89,Føtex
-Bacon,99.67,Føtex
-Hakket oksekød,84.29,Føtex
-Hakket svinekød,75.90,Føtex
-Toiletpapir,29.41,Føtex
-Rugbrød,13.90,Føtex
-Pasta,10.75,Føtex
-Havregryn,9.95,Føtex
-Mel,4.48,Føtex
-Smør,60,Netto
-Mælk,10.5,Netto
-Yoghurt,14,Netto
-Æg,2.50,Netto
-Skiveost,105.56,Netto
-Pære,3.87,Netto
-Æble,1.78,Netto
-Hjertesalat,10,Netto
-Agurk,7.5,Netto
-Tomat,40,Netto
-Vaniljeis,29,Netto
-Fryseærter,16,Netto
-Rundstykker,17,Netto
-Isterninger,10,Netto
-Frysekartofler,12,Netto
-Medisterpølse,62.50,Netto
-Kyllingebryst,110,Netto
-Bacon,63,33,Netto
-Hakket oksekød,62.50,Netto
-Hakket svinekød,62.50,Netto
-Toiletpapir,31,Netto
-Rugbrød,23,Netto
-Pasta,9.50,Netto
-Havregryn,9,Netto
-Mel,2.50,Netto
-Smør,95,SuperBrugsen
-Mælk,10.50,SuperBrugsen
-Yoghurt,15,SuperBrugsen
-Æg,1.50,SuperBrugsen
-Skiveost,110,SuperBrugsen
-Pære,3,SuperBrugsen
-Æble,3,SuperBrugsen
-Hjertesalat,14,SuperBrugsen
-Agurk,9,SuperBrugsen
-Tomat,45,SuperBrugsen
-Vaniljeis,28,SuperBrugsen
-Fryseærter,11,SuperBrugsen
-Rundstykker,83.33,SuperBrugsen
-Isterninger,15,,SuperBrugsen
-Frysekartofler,14,Superbrugsen
-Medisterpølse,79.95,SuperBrugsen
-Kyllingebryst,59,SuperBrugsen
-Bacon,70,SuperBrugsen
-Hakket oksekød,72.50,SuperBrugsen
-Hakket svinekød,150,SuperBrugsen
-Toiletpapir,26.03,SuperBrugsen
-Rugbrød,28,SuperBrugsen
-Pasta,15,SuperBrugsen
-Havregryn,12,SuperBrugsen
-Mel,6,SuperBrugsen
-Smør,50,Lidl
-Mælk,10,Lidl
-Yoghurt,14,Lidl
-Æg,2.13,Lidl
-Skiveost,78.67,Lidl
-Pære,2.5,Lidl
-Æble,2,5,Lidl
-Hjertesalat,14,Lidl
-Agurk,8,Lidl
-Tomat,38,Lidl
-Vaniljeis,25,Lidl
-Fryseærter,10,Lidl
-Rundstykker,20,Lidl
-Isterninger,15,Lidl
-Frysekartofler,11.50,Lidl
-Medisterpølse,65,Lidl
-Kyllingebryst,89.30,Lidl
-Bacon,64.95,Lidl
-Hakket oksekød,70,Lidl
-Hakket svinekød,49,Lidl
-Toiletpapir,29.95,Lidl
-Rugbrød,24,Lidl
-Pasta,14,Lidl
-Havregryn,11,Lidl
-Mel,5.50,Lidl
+Smoer , 75 , Rema1000
+Maelk , 9.5 , Rema1000
+Yoghurt , 15 , Rema1000
+aeg , 2.7 , Rema1000
+Skiveost , 103.87 , Rema1000
+Paere , 4 , Rema1000
+aeble , 2.25 , Rema1000
+Hjertesalat , 10 , Rema1000
+Agurk , 5 , Rema1000
+Tomat , 60 , Rema1000
+Vaniljeis , 40 , Rema1000
+Fryseaerter , 15.67 , Rema1000
+Rundstykker , 16 , Rema1000
+Isterninger , 10 , Rema1000
+Frysekartofler , 16.67 , Rema1000
+Medisterpoelse , 72.50 , Rema1000
+Kyllingebryst , 86.67 , Rema1000
+Bacon , 50 , Rema1000
+Hakket_oksekoed , 78 , Rema1000
+Hakket_svinekoed , 78 , Rema1000
+Toiletpapir , 28.11 , Rema1000
+Rugbroed , 25.64 , Rema1000
+Pasta , 9 , Rema1000
+Havregryn , 8 , Rema1000
+Mel , 6 , Rema1000
+Smoer , 50 , Foetex
+Maelk , 10.5 , Foetex
+Yoghurt , 15.5 , Foetex
+aeg , 2 , Foetex
+Skiveost , 104.17 , Foetex
+Paere , 4.17 , Foetex
+aeble , 1.88 , Foetex
+Hjertesalat , 14 , Foetex
+Agurk , 8 , Foetex
+Tomat , 40 , Foetex
+Vaniljeis , 23.95 , Foetex
+Fryseaerter , 17.14 , Foetex
+Rundstykker , 20 , Foetex
+Isterninger , 10 , Foetex
+Frysekartofler , 13.89 , Foetex
+Medisterpoelse , 59 , Foetex
+Kyllingebryst , 93.89 , Foetex
+Bacon , 99.67 , Foetex
+Hakket_oksekoed , 84.29 , Foetex
+Hakket_svinekoed , 75.90 , Foetex
+Toiletpapir , 29.41 , Foetex
+Rugbroed , 13.90 , Foetex
+Pasta , 10.75 , Foetex
+Havregryn , 9.95 , Foetex
+Mel , 4.48 , Foetex
+Smoer , 60 , Netto
+Maelk , 10.5 , Netto
+Yoghurt , 14 , Netto
+aeg , 2.50 , Netto
+Skiveost , 105.56 , Netto
+Paere , 3.87 , Netto
+aeble , 1.78 , Netto
+Hjertesalat , 10 , Netto
+Agurk , 7.5 , Netto
+Tomat , 40 , Netto
+Vaniljeis , 29 , Netto
+Fryseaerter , 16 , Netto
+Rundstykker , 17 , Netto
+Isterninger , 10 , Netto
+Frysekartofler , 12 , Netto
+Medisterpoelse , 62.50 , Netto
+Kyllingebryst , 110 , Netto
+Bacon , 63.33 , Netto
+Hakket_oksekoed , 62.50 , Netto
+Hakket_svinekoed , 62.50 , Netto
+Toiletpapir , 31 , Netto
+Rugbroed , 23 , Netto
+Pasta , 9.50 , Netto
+Havregryn , 9 , Netto
+Mel , 2.50 , Netto
+Smoer , 95 , SuperBrugsen
+Maelk , 10.50 , SuperBrugsen
+Yoghurt , 15 , SuperBrugsen
+aeg , 1.50 , SuperBrugsen
+Skiveost , 110 , SuperBrugsen
+Paere , 3 , SuperBrugsen
+aeble , 3 , SuperBrugsen
+Hjertesalat , 14 , SuperBrugsen
+Agurk , 9 , SuperBrugsen
+Tomat , 45 , SuperBrugsen
+Vaniljeis , 28 , SuperBrugsen
+Fryseaerter , 11 , SuperBrugsen
+Rundstykker , 83.33 , SuperBrugsen
+Isterninger , 15 , SuperBrugsen
+Frysekartofler , 14 , Superbrugsen
+Medisterpoelse , 79.95 , SuperBrugsen
+Kyllingebryst , 59 , SuperBrugsen
+Bacon , 70 , SuperBrugsen
+Hakket_oksekoed , 72.50 , SuperBrugsen
+Hakket_svinekoed , 150 , SuperBrugsen
+Toiletpapir , 26.03 , SuperBrugsen
+Rugbroed , 28 , SuperBrugsen
+Pasta , 15 , SuperBrugsen
+Havregryn , 12 , SuperBrugsen
+Mel , 6 , SuperBrugsen
+Smoer , 50 , Lidl
+Maelk , 10 , Lidl
+Yoghurt , 14 , Lidl
+aeg , 2.13 , Lidl
+Skiveost , 78.67 , Lidl
+Paere , 2.5 , Lidl
+aeble , 2.5 , Lidl
+Hjertesalat , 14 , Lidl
+Agurk , 8 , Lidl
+Tomat , 38 , Lidl
+Vaniljeis , 25 , Lidl
+Fryseaerter , 10 , Lidl
+Rundstykker , 20 , Lidl
+Isterninger , 15 , Lidl
+Frysekartofler , 11.50 , Lidl
+Medisterpoelse , 65 , Lidl
+Kyllingebryst , 89.30 , Lidl
+Bacon , 64.95 , Lidl
+Hakket_oksekoed , 70 , Lidl
+Hakket_svinekoed , 49 , Lidl
+Toiletpapir , 29.95 , Lidl
+Rugbroed , 24 , Lidl
+Pasta , 14 , Lidl
+Havregryn , 11 , Lidl
+Mel , 5.50 , Lidl
