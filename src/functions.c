@@ -19,7 +19,7 @@ int main()
     printf("\n");
     for (int i = 0; i < number_of_items; ++i)
     {
-        printf("test string value 2: %s\n",grocery_list[i]);
+        printf("test string value 3: %s\n",grocery_list[i]);
     }
 
     printf("Final Grocery List:\n");
@@ -79,7 +79,7 @@ void user_input ()
     }
 
     //grocery list som er vores endelig liste allokeres til den passende størrelse
-    grocery_list = malloc(sizeof(char) * (number_of_items + 1));
+    grocery_list = malloc(sizeof(char*) * (number_of_items + 1));
     exit_failure(grocery_list);
 
 
@@ -92,7 +92,17 @@ void user_input ()
         printf("test string value: %s\n",grocery_list[i]); //Den overfører strengene fra temp til grocery list korrekt nu (uanset antal af elementer)
     }
 
-    free_memory(temp_grocery_list);
+    //free_memory(temp_grocery_list);
+    /*for (int i = 0; i < 100; ++i)
+    {
+        free(temp_grocery_list[i]);
+    }*/
+    free(temp_grocery_list);
+
+    for (int i = 0; i < number_of_items; ++i)
+    {
+        printf("test string value 2: %s\n",grocery_list[i]);
+    }
 }
 
 void print_grocery_list(char **list)
