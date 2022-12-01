@@ -42,8 +42,6 @@ void user_input ()
         fgets(item,MAX_ITEM_SIZE, stdin);
         item[strlen(item)- 1] = '\0';
 
-        printf("item = %s\n", item);
-
         if(strcmp(item, "exit") != 0)
         {
             temp_grocery_list[k] = malloc(strlen(item));
