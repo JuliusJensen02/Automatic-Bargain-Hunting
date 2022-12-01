@@ -67,6 +67,7 @@ int main()
         //printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
     }
 printf("hey ;)");
+    printf("farvel");
     return 0;
 
 }
