@@ -74,7 +74,10 @@ void user_input ()
 
     free(temp_grocery_list);
 }
-
+/**
+ * This function prints the grocery list
+ * @param list
+ */
 void print_grocery_list(char **list)
 {
     for (int i = 0; i < number_of_items; ++i)
