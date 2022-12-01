@@ -11,18 +11,7 @@ void exit_failure (char **array);
 int number_of_items = 0;
 char **grocery_list;
 
-int main()
-{
-    user_input();
 
-    printf("Final Grocery List:\n");
-
-    print_grocery_list(grocery_list);
-
-    free(grocery_list);
-
-    return 0;
-}
 
 void user_input ()
 {
@@ -83,7 +72,7 @@ void print_grocery_list(char **list)
     for (int i = 0; i < number_of_items; ++i)
     {
         printf("%s",list[i]);
-        printf("\n");;
+        printf("\n");
     }
 }
 void exit_failure (char **array)
