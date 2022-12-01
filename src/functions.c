@@ -3,15 +3,12 @@
 #include <string.h>
 #define MAX_ITEM_SIZE 4096
 
-
 void user_input ();
 void print_grocery_list(char **list);
 void exit_failure (char **array);
 
 int number_of_items = 0;
 char **grocery_list;
-
-
 
 void user_input ()
 {
@@ -63,10 +60,7 @@ void user_input ()
 
     free(temp_grocery_list);
 }
-/**
- * This function prints the grocery list
- * @param list
- */
+
 void print_grocery_list(char **list)
 {
     for (int i = 0; i < number_of_items; ++i)
