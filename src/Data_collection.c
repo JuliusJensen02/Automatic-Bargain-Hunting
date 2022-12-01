@@ -34,7 +34,7 @@ int main()
         printf("Items not available");
         exit (EXIT_FAILURE);
 
-    }
+     }
 
     if (item_data_file == NULL)
     {
