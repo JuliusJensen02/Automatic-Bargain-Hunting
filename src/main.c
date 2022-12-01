@@ -12,5 +12,7 @@ int main(void){
     free(grocery_list);
 
     //hej hej hej
+
+    //mere hej
     return 0;
 }
