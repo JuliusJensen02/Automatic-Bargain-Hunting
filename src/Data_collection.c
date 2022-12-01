@@ -66,7 +66,7 @@ int main()
         item_data[i] = scan_item_data(item_data_file);
         //printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
     }
-
+printf("hey ;)");
     return 0;
 
 }
