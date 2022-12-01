@@ -34,7 +34,7 @@ int main()
         printf("Items not available");
         exit (EXIT_FAILURE);
 
-    }
+     }
 
     if (item_data_file == NULL)
     {
@@ -55,7 +55,7 @@ int main()
     items_data item_data[count*NUMBER_OF_STORES]; // sets size of struct array
 
     rewind(items_file); //resets file reader to start of file
-    printf("Eksisterende varer:\n");
+    printf("Eksisterende varer:\n");;
     for (int i = 0; i < count ; ++i) //loops through different products and prints them.
     {
        item[i]= scan_item(items_file);
