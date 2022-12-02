@@ -17,7 +17,6 @@ void user_input ()
 {
     char item[MAX_ITEM_SIZE];
     char **temp_grocery_list;
-    int k = 0;
 
     printf("Please write the items you want to find one by one:");
 
@@ -35,16 +34,14 @@ void user_input ()
 
         if(strcmp(item, "exit") != 0)
         {
-            temp_grocery_list[k] = malloc(strlen(item));
+            temp_grocery_list[number_of_items] = malloc(strlen(item));
             exit_failure(temp_grocery_list);
 
-            number_of_items = number_of_items + 1;
+            strcpy(temp_grocery_list[number_of_items], item);
+
+            number_of_items += 1;
             printf("Number of items = %d\n",number_of_items);
 
-
-            strcpy(temp_grocery_list[k], item);
-
-            k++;
             print_grocery_list(temp_grocery_list);
 
             printf("If end of grocery list, please write 'exit'. If not, write next item:");
@@ -54,7 +51,6 @@ void user_input ()
     grocery_list = malloc(sizeof(char*) * (number_of_items + 1));
     exit_failure(grocery_list);
 
-
     for (int i = 0; i < number_of_items; ++i)
     {
         grocery_list[i] = malloc(MAX_ITEM_SIZE);
@@ -62,7 +58,6 @@ void user_input ()
 
         strcpy(grocery_list[i],temp_grocery_list[i]);
     }
-
     free(temp_grocery_list);
 }
 
