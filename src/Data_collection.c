@@ -19,8 +19,9 @@ typedef struct
 items scan_item (FILE* items_file);
 items_data scan_item_data (FILE* item_data_file);
 void checkFile(FILE*);
+void loadData(void);
 
-int main()
+void loadData(void)
 {
     FILE* items_file;
     items_file = fopen("Data/Varer.txt","r");
