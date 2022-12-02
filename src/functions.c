@@ -77,6 +77,11 @@ void print_grocery_list(char **list)
         printf("%s\n",list[i]);
     }
 }
+
+/**
+ * A function that checks if memory is allocated correctly for the inputted array
+ * @param uses an array as input.
+ */
 void exit_failure (char **array)
 {
     if (array == NULL)
