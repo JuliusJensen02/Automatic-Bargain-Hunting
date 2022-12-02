@@ -10,6 +10,9 @@ void exit_failure (char **array);
 int number_of_items = 0;
 char **grocery_list;
 
+/**
+ * The main function to accept the users input. As well as sorting the inputted grocery items into a grocery list.
+ */
 void user_input ()
 {
     char item[MAX_ITEM_SIZE];
@@ -25,8 +28,10 @@ void user_input ()
     while (strcmp(item, "exit") != 0)
     {
 
+        //fgets is the way the program accept input from user
         fgets(item,MAX_ITEM_SIZE, stdin);
-        item[strlen(item)- 1] = '\0';
+
+        item[strlen(item)- 1] = '\0'; //replaces the '\n' with '\0'
 
         if(strcmp(item, "exit") != 0)
         {
@@ -61,6 +66,10 @@ void user_input ()
     free(temp_grocery_list);
 }
 
+/**
+ * A function that prints an array of strings.
+ * @param uses an array as input.
+ */
 void print_grocery_list(char **list)
 {
     for (int i = 0; i < number_of_items; ++i)
