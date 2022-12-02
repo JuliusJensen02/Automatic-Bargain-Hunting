@@ -57,7 +57,7 @@ void user_input ()
 
     for (int i = 0; i < number_of_items; ++i)
     {
-        grocery_list[i] = malloc(20);
+        grocery_list[i] = malloc(MAX_ITEM_SIZE);
         exit_failure(grocery_list);
 
         strcpy(grocery_list[i],temp_grocery_list[i]);
