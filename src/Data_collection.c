@@ -19,8 +19,9 @@ typedef struct
 items scan_item (FILE* items_file);
 items_data scan_item_data (FILE* item_data_file);
 void checkFile(FILE*);
+void loadData(void);
 
-int main()
+void loadData(void)
 {
     FILE* items_file;
     items_file = fopen("Data/Varer.txt","r");
@@ -46,16 +47,13 @@ int main()
     for (int i = 0; i < count ; ++i) //loops through different products and prints them.
     {
         item[i]= scan_item(items_file);
-        //printf("%s\n",item[i].item_name);
+        printf("%s\n",item[i].item_name);
     }
     for (int i = 0; i < count * NUMBER_OF_STORES ; ++i) //loops through all products and scans product data
     {
         item_data[i] = scan_item_data(item_data_file);
-        //printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
+       // printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
     }
-
-    return 0;
-
 }
 
 void checkFile(FILE* file){
@@ -75,26 +73,34 @@ items scan_item (FILE* items_file)
 items_data scan_item_data(FILE* item_data_file)
 {
     items_data new_item_data;
-    //fscanf(item_data_file,"%s, %lf , %s", new_item_data.item_name,
-    //       &new_item_data.item_price,new_item_data.item_store);
 
-    char str[100];
-    fgets(str, 100, item_data_file);
+    char temp_str[100]; 
+    fgets(temp_str, 100, item_data_file);
 
-    char *p = strtok (str, ",");
-    int i = 0;
+    char *p = strtok (temp_str, ",");
+    int i = 0; //used in while loop for array
     char *array[3];
 
-    while (p != NULL)
+    while (p != NULL) //loops through data points until null
     {
         array[i++] = p;
         p = strtok (NULL, ",");
     }
 
-    for (i = 0; i < 3; ++i)
-        printf("%s\n", array[i]);
-
-
-
+    for (i = 0; i < 3; ++i) //copys data from array into struct
+    {
+        if(i == 0)
+        {
+            strcpy(new_item_data.item_name, array[i]);
+        }
+        else if (i == 1)
+        {
+            sscanf(array[i], "%lf", &new_item_data.item_price);
+        }
+        else
+        {
+            strcpy(new_item_data.item_store, array[i]);
+        }
+    }
     return new_item_data;
 }
