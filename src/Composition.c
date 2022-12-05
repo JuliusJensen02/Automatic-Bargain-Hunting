@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void composition (char** grocery_list, )
+/*void composition (char** grocery_list, )
 {
 
-}
+}*/
