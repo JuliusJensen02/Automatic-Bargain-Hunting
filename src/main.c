@@ -1,14 +1,13 @@
 #include <stdio.h>
-#include "Data_collection.c"
-#include "functions.c"
-//#include "price_comparison.c"
-#include "Composition.c"
+#include "Headers/Data_collection.h"
+#include "Headers/Function.h"
+//#include "Headers/Comparison.h"
+//#include "Headers/Composition.h"
 
 int main(void){
 
     loadData();
     user_input();
-    composition();
 
 
     printf("Final Grocery List:\n");
