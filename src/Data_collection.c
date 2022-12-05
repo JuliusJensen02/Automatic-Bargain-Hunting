@@ -37,7 +37,7 @@ void loadData(void)
 
     rewind(items_file); //resets file reader to start of file
     printf("Eksisterende varer:\n");
-    for (int i = 0; i < NUMBER_OF_ITEMS*NUMBER_OF_STORES ; ++i) //loops through different products and prints them.
+    for (int i = 0; i < NUMBER_OF_ITEMS ; ++i) //loops through different products and prints them.
     {
         item[i]= scan_item(items_file);
         printf("%s\n",item[i].item_name);
@@ -45,7 +45,7 @@ void loadData(void)
     for (int i = 0; i < NUMBER_OF_ITEMS*NUMBER_OF_STORES ; ++i) //loops through all products and scans product data
     {
         item_data[i] = scan_item_data(item_data_file);
-       // printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
+        //printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
     }
 }
 
