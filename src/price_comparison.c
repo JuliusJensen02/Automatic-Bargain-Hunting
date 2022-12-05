@@ -13,13 +13,6 @@ void printPrices(void);
 
 individual_stores individual_store_total[NUMBER_OF_STORES]; // sets size of struct array
 
-int main(){
-    loadData();
-    user_input();
-    compare_prices();
-    return 0;
-}
-
 void compare_prices(void){
     for (int i = 0; i < number_of_items; i++) {
         for(int j = 0; j < NUMBER_OF_ITEMS*NUMBER_OF_STORES; j++) {
