@@ -20,12 +20,11 @@ typedef struct
 items scan_item (FILE* items_file);
 items_data scan_item_data (FILE* item_data_file);
 void checkFile(FILE*);
-void loadData(void);
+void loadData(items *available_items, items_data *item_data_stores_prices);
 
-items item[NUMBER_OF_ITEMS]; // sets size of struct array
-items_data item_data[NUMBER_OF_ITEMS*NUMBER_OF_STORES]; // sets size of struct array
 
-void loadData(void)
+
+void loadData(items *available_items, items_data *item_data_stores_prices)
 {
     FILE* items_file;
     items_file = fopen("Data/Varer.txt","r");
@@ -39,12 +38,12 @@ void loadData(void)
     printf("Eksisterende varer:\n");
     for (int i = 0; i < NUMBER_OF_ITEMS ; ++i) //loops through different products and prints them.
     {
-        item[i]= scan_item(items_file);
-        printf("%s\n",item[i].item_name);
+        available_items[i]= scan_item(items_file);
+        printf("%s\n",available_items[i].item_name);
     }
     for (int i = 0; i < NUMBER_OF_ITEMS*NUMBER_OF_STORES ; ++i) //loops through all products and scans product data
     {
-        item_data[i] = scan_item_data(item_data_file);
+        item_data_stores_prices[i] = scan_item_data(item_data_file);
         //printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
     }
 }
