@@ -8,3 +8,4 @@ add_executable(Automatic_Bargain_Hunting
 
 add_executable(Data_collection src/Data_collection.c)
 add_executable(Functions src/functions.c)
+add_executable(Comparison src/price_comparison.c)
