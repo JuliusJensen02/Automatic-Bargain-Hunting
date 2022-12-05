@@ -10,6 +10,7 @@
 void user_input (char **grocery_list, int number_of_list_items);
 void print_grocery_list(char **list, int number_of_list_items);
 void exit_failure (char **array);
+void assign_grocery_list (char **grocery_list, char **temp_list, int number_of_list_items);
 
 
 #endif //AUTOMATIC_BARGAIN_HUNTING_FUNCTION_H
