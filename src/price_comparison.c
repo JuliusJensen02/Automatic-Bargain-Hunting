@@ -3,11 +3,12 @@
 
 void compare_prices(void);
 
+/*
 int main(){
     loadData();
     user_input();
     compare_prices();
-}
+}*/
 
 void compare_prices(void){
     for (int i = 0; i < number_of_items; ++i) {
