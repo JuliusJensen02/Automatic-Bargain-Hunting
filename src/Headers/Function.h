@@ -1,3 +1,7 @@
+
+#ifndef AUTOMATIC_BARGAIN_HUNTING_FUNCTION_H
+#define AUTOMATIC_BARGAIN_HUNTING_FUNCTION_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -85,3 +89,5 @@ void exit_failure (char **array)
         exit(EXIT_FAILURE);
     }
 }
+
+#endif //AUTOMATIC_BARGAIN_HUNTING_FUNCTION_H
