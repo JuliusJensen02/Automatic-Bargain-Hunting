@@ -1,5 +1,5 @@
-#include "Data_collection.c"
-#include "functions.c"
+#include "Headers/Data_collection.h"
+#include "Headers/Function.h"
 
 typedef struct{
     char store[20];
