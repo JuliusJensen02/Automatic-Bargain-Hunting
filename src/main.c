@@ -4,7 +4,10 @@
 #include "price_comparison.c"
 
 int main(void){
+
+    loadData();
     user_input();
+
 
     printf("Final Grocery List:\n");
 
