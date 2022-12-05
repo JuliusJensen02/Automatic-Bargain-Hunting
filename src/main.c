@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "Data_collection.c"
 #include "functions.c"
+#include "price_comparison.c"
 
 int main(void){
 

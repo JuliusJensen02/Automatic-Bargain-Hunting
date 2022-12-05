@@ -3,6 +3,7 @@
 #include <string.h>
 
 #define NUMBER_OF_STORES 5
+#define NUMBER_OF_ITEMS 25
 
 typedef struct
 {
@@ -21,6 +22,9 @@ items_data scan_item_data (FILE* item_data_file);
 void checkFile(FILE*);
 void loadData(void);
 
+items item[NUMBER_OF_ITEMS]; // sets size of struct array
+items_data item_data[NUMBER_OF_ITEMS*NUMBER_OF_STORES]; // sets size of struct array
+
 void loadData(void)
 {
     FILE* items_file;
@@ -31,25 +35,14 @@ void loadData(void)
     item_data_file = fopen("Data/Varedata.txt","r");
     checkFile(item_data_file);
 
-    int count = 1;
-    for (int c = getc(items_file); c != EOF; c = getc(items_file)) //counts items from file
-    {
-        if (c == '\n')
-        {
-            count = count + 1;
-        }
-    }
-    items item[count]; // sets size of struct array
-    items_data item_data[count*NUMBER_OF_STORES]; // sets size of struct array
-
     rewind(items_file); //resets file reader to start of file
     printf("Eksisterende varer:\n");
-    for (int i = 0; i < count ; ++i) //loops through different products and prints them.
+    for (int i = 0; i < NUMBER_OF_ITEMS*NUMBER_OF_STORES ; ++i) //loops through different products and prints them.
     {
         item[i]= scan_item(items_file);
         printf("%s\n",item[i].item_name);
     }
-    for (int i = 0; i < count * NUMBER_OF_STORES ; ++i) //loops through all products and scans product data
+    for (int i = 0; i < NUMBER_OF_ITEMS*NUMBER_OF_STORES ; ++i) //loops through all products and scans product data
     {
         item_data[i] = scan_item_data(item_data_file);
        // printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
