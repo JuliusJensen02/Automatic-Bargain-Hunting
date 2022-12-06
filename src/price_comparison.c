@@ -16,7 +16,7 @@ void compare_prices(char **grocery_list, int number_of_list_items, items_data *i
 void calculate_prices(int j, items_data *item_data);
 void transfer_stores(int j, items_data *item_data);
 void printPrices(void);
-void printPrices_multiple_stores(void);
+void printPrices_multiple_stores(int number_of_list_items);
 void transfer_items_multiple_stores(int j, items_data *item_data);
 
 individual_stores individual_store_total[NUMBER_OF_STORES]; // sets size of struct array
@@ -32,7 +32,7 @@ void compare_prices(char **grocery_list, int number_of_list_items, items_data *i
             }
         }
     }
-    printPrices_multiple_stores();
+    printPrices_multiple_stores(number_of_list_items);
     printPrices();
 }
 
@@ -79,9 +79,10 @@ void printPrices(void){
     }
 }
 
-void printPrices_multiple_stores(void){
-    for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
+void printPrices_multiple_stores(int number_of_list_items){
+    for (int i = 0; i < number_of_list_items; i++) {
         printf("%-15s\t:\t%.2lf kr.\t%s\n", multiple_stores_total[i].cheapest_store,
                multiple_stores_total[i].total, multiple_stores_total[i].cheapest_item);
     }
+    printf("\n");
 }

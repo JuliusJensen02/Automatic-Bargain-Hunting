@@ -9,5 +9,6 @@ typedef struct{
 } individual_stores;
 
 void compare_prices(char **grocery_list, int number_of_list_items, items_data *item_data);
+void printPrices_multiple_stores(int number_of_list_items);
 
 #endif //AUTOMATIC_BARGAIN_HUNTING_COMPARISON_H
