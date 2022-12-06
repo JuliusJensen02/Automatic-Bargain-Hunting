@@ -61,9 +61,8 @@ void transfer_items_multiple_stores(int j, items_data *item_data){
                 multiple_stores_total[k].total = item_data[j].item_price;
                 strcpy(multiple_stores_total[k].cheapest_store, item_data[j].item_store);
 
-                break;
             }
-
+            break;
         }
         if (strcmp(multiple_stores_total[k].cheapest_item, "") == 0) {
             strcpy(multiple_stores_total[k].cheapest_item, item_data[j].item_name);
