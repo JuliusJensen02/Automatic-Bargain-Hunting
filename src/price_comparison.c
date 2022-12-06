@@ -18,6 +18,7 @@ void transfer_stores(int j, items_data *item_data);
 void printPrices(void);
 void printPrices_multiple_stores(int number_of_list_items);
 void transfer_items_multiple_stores(int j, items_data *item_data);
+int cmp_fnc(const void* a, const void* b);
 
 individual_stores individual_store_total[NUMBER_OF_STORES]; // sets size of struct array
 multiple_stores multiple_stores_total[NUMBER_OF_ITEMS*NUMBER_OF_STORES]; // sets size of struct array
@@ -33,6 +34,7 @@ void compare_prices(char **grocery_list, int number_of_list_items, items_data *i
         }
     }
     printPrices_multiple_stores(number_of_list_items);
+    qsort(individual_store_total,NUMBER_OF_STORES, sizeof(individual_stores), cmp_fnc);
     printPrices();
 }
 
@@ -85,4 +87,12 @@ void printPrices_multiple_stores(int number_of_list_items){
                multiple_stores_total[i].total, multiple_stores_total[i].cheapest_item);
     }
     printf("\n");
+}
+
+int cmp_fnc(const void* a, const void* b)
+{
+    individual_stores *store1 = (individual_stores*) a;
+    individual_stores *store2 = (individual_stores*) b;
+
+    return (store1->total - store2->total);
 }
