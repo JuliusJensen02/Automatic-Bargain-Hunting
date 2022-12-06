@@ -10,7 +10,7 @@ void compare_prices(char **grocery_list, int number_of_list_items, items_data *i
 void calculate_prices(int j, items_data *item_data);
 void transfer_stores(int j, items_data *item_data);
 void printPrices(void);
-int cmp_fnc(const void* a, const void* b);
+
 
 individual_stores individual_store_total[NUMBER_OF_STORES]; // sets size of struct array
 
@@ -23,7 +23,6 @@ void compare_prices(char **grocery_list, int number_of_list_items, items_data *i
             }
         }
     }
-    qsort(individual_store_total,NUMBER_OF_STORES, sizeof(individual_stores), cmp_fnc);
     printPrices();
 }
 
@@ -48,12 +47,4 @@ void printPrices(void){
     for (int i = 0; i < NUMBER_OF_STORES; i++) {
         printf("%-15s\t:\t%.2lf kr.\n", individual_store_total[i].store, individual_store_total[i].total);
     }
-}
-
-int cmp_fnc(const void* a, const void* b)
-{
-    individual_stores *store1 = (individual_stores*) a;
-    individual_stores *store2 = (individual_stores*) b;
-
-    return (store1->total - store2->total);
 }
