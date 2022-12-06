@@ -58,7 +58,9 @@ void checkFile(FILE* file){
 items scan_item (FILE* items_file)
 {
     items new_item;
-    fscanf(items_file, "%s",new_item.item_name);
+    fgets(new_item.item_name, 100, items_file);
+
+    new_item.item_name[strlen(new_item.item_name)- 1] = '\0'; //replaces the '\n' with '\0'
     return new_item;
 }
 
