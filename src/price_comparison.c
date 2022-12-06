@@ -44,6 +44,6 @@ void calculate_prices(int j, items_data *item_data){
 
 void printPrices(void){
     for (int i = 0; i < NUMBER_OF_STORES; i++) {
-        printf("%s: %lf\n", individual_store_total[i].store, individual_store_total[i].total);
+        printf("%-15s\t:\t%.2lf kr.\n", individual_store_total[i].store, individual_store_total[i].total);
     }
 }

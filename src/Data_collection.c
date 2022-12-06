@@ -69,6 +69,8 @@ items_data scan_item_data(FILE* item_data_file)
     char temp_str[100]; 
     fgets(temp_str, 100, item_data_file);
 
+    temp_str[strlen(temp_str)- 1] = '\0'; //replaces the '\n' with '\0'
+
     char *p = strtok (temp_str, ",");
     int i = 0; //used in while loop for array
     char *array[3];

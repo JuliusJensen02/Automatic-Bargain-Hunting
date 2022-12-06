@@ -12,14 +12,14 @@ int main(void)
 {
 
     loadData(available_items, item_data_stores_prices);
-    user_input(grocery_list, number_of_list_items);
+    user_input(grocery_list, &number_of_list_items);
 
-    printf("Final Grocery List:\n");
+    grocery_list = malloc(sizeof(char*) * (number_of_list_items + 1));
+    exit_failure(grocery_list);
 
-    print_grocery_list(grocery_list, number_of_list_items);
+    assign_grocery_list(grocery_list, number_of_list_items);
 
     compare_prices(grocery_list, number_of_list_items, item_data_stores_prices);
-
 
     free(grocery_list);
 
