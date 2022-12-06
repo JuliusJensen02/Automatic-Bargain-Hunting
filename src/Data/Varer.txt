@@ -1,10 +1,10 @@
 Smoer
 Maelk
 Yoghurt
-aeg
+Aeg
 Skiveost
 Paere
-aeble
+Aeble
 Hjertesalat
 Agurk
 Tomat
@@ -16,8 +16,8 @@ Frysekartofler
 Medisterpoelse
 Kyllingebryst
 Bacon
-Hakketoksekoed
-Hakketsvinekoed
+Hakket oksekoed
+Hakket svinekoed
 Toiletpapir
 Rugbroed
 Pasta

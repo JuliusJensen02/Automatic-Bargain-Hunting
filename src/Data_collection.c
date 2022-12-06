@@ -3,6 +3,7 @@
 #include <string.h>
 
 #define NUMBER_OF_STORES 5
+#define NUMBER_OF_ITEMS 25
 
 typedef struct
 {
@@ -19,9 +20,11 @@ typedef struct
 items scan_item (FILE* items_file);
 items_data scan_item_data (FILE* item_data_file);
 void checkFile(FILE*);
-void loadData(void);
+void loadData(items *available_items, items_data *item_data_stores_prices);
 
-void loadData(void)
+
+
+void loadData(items *available_items, items_data *item_data_stores_prices)
 {
     FILE* items_file;
     items_file = fopen("Data/Varer.txt","r");
@@ -31,28 +34,17 @@ void loadData(void)
     item_data_file = fopen("Data/Varedata.txt","r");
     checkFile(item_data_file);
 
-    int count = 1;
-    for (int c = getc(items_file); c != EOF; c = getc(items_file)) //counts items from file
-    {
-        if (c == '\n')
-        {
-            count = count + 1;
-        }
-    }
-    items item[count]; // sets size of struct array
-    items_data item_data[count*NUMBER_OF_STORES]; // sets size of struct array
-
     rewind(items_file); //resets file reader to start of file
     printf("Eksisterende varer:\n");
-    for (int i = 0; i < count ; ++i) //loops through different products and prints them.
+    for (int i = 0; i < NUMBER_OF_ITEMS ; ++i) //loops through different products and prints them.
     {
-        item[i]= scan_item(items_file);
-        printf("%s\n",item[i].item_name);
+        available_items[i]= scan_item(items_file);
+        printf("%s\n",available_items[i].item_name);
     }
-    for (int i = 0; i < count * NUMBER_OF_STORES ; ++i) //loops through all products and scans product data
+    for (int i = 0; i < NUMBER_OF_ITEMS*NUMBER_OF_STORES ; ++i) //loops through all products and scans product data
     {
-        item_data[i] = scan_item_data(item_data_file);
-       // printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
+        item_data_stores_prices[i] = scan_item_data(item_data_file);
+        //printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
     }
 }
 
@@ -66,7 +58,9 @@ void checkFile(FILE* file){
 items scan_item (FILE* items_file)
 {
     items new_item;
-    fscanf(items_file, "%s",new_item.item_name);
+    fgets(new_item.item_name, 100, items_file);
+
+    new_item.item_name[strlen(new_item.item_name)- 1] = '\0'; //replaces the '\n' with '\0'
     return new_item;
 }
 
@@ -76,6 +70,8 @@ items_data scan_item_data(FILE* item_data_file)
 
     char temp_str[100]; 
     fgets(temp_str, 100, item_data_file);
+
+    temp_str[strlen(temp_str)- 1] = '\0'; //replaces the '\n' with '\0'
 
     char *p = strtok (temp_str, ",");
     int i = 0; //used in while loop for array
