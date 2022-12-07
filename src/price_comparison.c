@@ -24,6 +24,9 @@ double total_multiple_store_price (int number_of_list_items);
 individual_stores individual_store_total[NUMBER_OF_STORES]; // sets size of struct array
 multiple_stores multiple_stores_total[NUMBER_OF_ITEMS*NUMBER_OF_STORES]; // sets size of struct array
 
+/**
+ * Main function for comparing prices.
+ */
 void compare_prices(char **grocery_list, int number_of_list_items, items_data *item_data){
     for (int i = 0; i < number_of_list_items; i++) {
         for(int j = 0; j < NUMBER_OF_ITEMS*NUMBER_OF_STORES; j++) {
@@ -39,6 +42,9 @@ void compare_prices(char **grocery_list, int number_of_list_items, items_data *i
     printPrices();
 }
 
+/**
+ * Function that saves stores for the individual store type.
+ */
 void transfer_stores(int j, items_data *item_data){
     for (int k = 0; k < NUMBER_OF_STORES; k++) {
         if (strcmp(individual_store_total[k].store, "") == 0) {
@@ -48,6 +54,9 @@ void transfer_stores(int j, items_data *item_data){
     }
 }
 
+/**
+ * Calculates prices for the individual stores.
+ */
 void calculate_prices(int j, items_data *item_data){
     for (int l = 0; l < NUMBER_OF_STORES; l++) {
         if(strcmp(item_data[j].item_store, individual_store_total[l].store) == 0){
@@ -69,7 +78,6 @@ void transfer_items_multiple_stores(int j, items_data *item_data){
             {
                 multiple_stores_total[k].price = item_data[j].item_price;
                 strcpy(multiple_stores_total[k].cheapest_store, item_data[j].item_store);
-
             }
             break;
         }
@@ -96,6 +104,9 @@ void printPrices_multiple_stores(int number_of_list_items){
     printf("Total price for multiple stores are %lf\n\n", total_multiple_store_price(number_of_list_items));
 }
 
+/**
+ * Function that loops through the items from the different stores and calculates prices.
+ */
 double total_multiple_store_price (int number_of_list_items)
 {
     double total = 0;
