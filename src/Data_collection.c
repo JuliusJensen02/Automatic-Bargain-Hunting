@@ -34,8 +34,6 @@ void loadData(items *available_items, items_data *item_data_stores_prices)
     item_data_file = fopen("Data/Varedata.txt","r");
     checkFile(item_data_file);
 
-    //resets file reader to start of file
-    rewind(items_file);
     printf("Eksisterende varer:\n");
     //loops through different products and prints them.
     for (int i = 0; i < NUMBER_OF_ITEMS ; ++i)
