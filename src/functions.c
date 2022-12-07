@@ -8,7 +8,7 @@ void user_input (int *number_of_list_items, items *available_items);
 void print_grocery_list(char **list, int number_of_list_items);
 void exit_failure (char **array);
 void assign_grocery_list (char **grocery_list, int number_of_list_items);
-int item_check (items *available_items, char item[MAX_ITEM_SIZE]);
+int item_check (items *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items);
 
 char **temp_grocery_list;
 
@@ -36,7 +36,8 @@ void user_input (int *number_of_list_items, items *available_items)
 
         if(strcmp(item, "exit") != 0)
         {
-            if (item_check(available_items, item))
+            int valid_item = item_check(available_items, item, temp_grocery_list, *number_of_list_items);
+            if (valid_item == 1)
             {
                 temp_grocery_list[*number_of_list_items] = malloc(strlen(item));
                 exit_failure(temp_grocery_list);
@@ -50,9 +51,13 @@ void user_input (int *number_of_list_items, items *available_items)
 
                 printf("If end of grocery list, please write 'exit'. If not, write next item:\n");
             }
-            else
+            else if (valid_item == 0)
             {
                 printf("This item does not exist in the program, please enter a new item:\n");
+            }
+            else
+            {
+                printf("This item is already in the grocery list:\n");
             }
         }
     }
@@ -107,13 +112,21 @@ void assign_grocery_list (char **grocery_list, int number_of_list_items)
 }
 
 /**
- * This function makes sure the user inputs an available item from the datafile.
+ * This function makes sure the user inputs an available item from the datafile and if the item inputted is a duplicate.
  * @param available_items is the input of all the available items.
  * @param item the inputted item
  * @return
  */
-int item_check (items *available_items, char item[MAX_ITEM_SIZE])
+int item_check (items *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items)
 {
+    for (int i = 0; i < number_of_list_items; ++i)
+    {
+        if (strcmp(temp[i], item) == 0)
+        {
+            return 2;
+        }
+
+    }
     for (int i = 0; i < NUMBER_OF_ITEMS; ++i)
     {
         if (strcmp(available_items[i].item_name, item) == 0)
