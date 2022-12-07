@@ -27,10 +27,16 @@ multiple_stores multiple_stores_total[NUMBER_OF_ITEMS*NUMBER_OF_STORES]; // sets
 /**
  * Main function for comparing prices.
  */
-void compare_prices(char **grocery_list, int number_of_list_items, items_data *item_data){
-    for (int i = 0; i < number_of_list_items; i++) {
-        for(int j = 0; j < NUMBER_OF_ITEMS*NUMBER_OF_STORES; j++) {
-            if(strcmp(grocery_list[i], item_data[j].item_name) == 0){
+void compare_prices(char **grocery_list,
+                    int number_of_list_items,
+                    items_data *item_data)
+                    {
+    for (int i = 0; i < number_of_list_items; i++)
+    {
+        for(int j = 0; j < NUMBER_OF_ITEMS*NUMBER_OF_STORES; j++)
+        {
+            if(strcmp(grocery_list[i], item_data[j].item_name) == 0)
+            {
                 transfer_stores(j, item_data);
                 calculate_prices(j, item_data);
                 transfer_items_multiple_stores(j, item_data);
@@ -38,7 +44,10 @@ void compare_prices(char **grocery_list, int number_of_list_items, items_data *i
         }
     }
     printPrices_multiple_stores(number_of_list_items);
-    qsort(individual_store_total,NUMBER_OF_STORES, sizeof(individual_stores), cmp_fnc);
+    qsort(individual_store_total,
+          NUMBER_OF_STORES,
+          sizeof(individual_stores),
+          cmp_fnc);
     printPrices();
 }
 

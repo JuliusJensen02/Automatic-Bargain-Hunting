@@ -18,27 +18,23 @@ char **temp_grocery_list;
 void user_input (int *number_of_list_items, items *available_items)
 {
     char item[MAX_ITEM_SIZE];
-
-
     printf("Please write the items you want to find one by one:");
 
     temp_grocery_list = malloc(sizeof(char*) * 100);
-
     exit_failure(temp_grocery_list);
 
     while (strcmp(item, "exit") != 0)
     {
-
         //fgets is the way the program accepts an input from the user
         fgets(item,MAX_ITEM_SIZE, stdin);
-
         item[strlen(item)- 1] = '\0'; //replaces the '\n' with '\0'
 
-        if(strcmp(item, "exit") != 0)
-        {
-            int valid_item = item_check(available_items, item, temp_grocery_list, *number_of_list_items);
-            if (valid_item == 1)
-            {
+        if(strcmp(item, "exit") != 0){
+            int valid_item = item_check(available_items,
+                                        item,
+                                        temp_grocery_list,
+                                        *number_of_list_items);
+            if (valid_item == 1){
                 temp_grocery_list[*number_of_list_items] = malloc(strlen(item));
                 exit_failure(temp_grocery_list);
 
@@ -51,12 +47,10 @@ void user_input (int *number_of_list_items, items *available_items)
 
                 printf("If end of grocery list, please write 'exit'. If not, write next item:\n");
             }
-            else if (valid_item == 0)
-            {
+            else if (valid_item == 0){
                 printf("This item does not exist in the program, please enter a new item:\n");
             }
-            else
-            {
+            else{
                 printf("This item is already in the grocery list:\n");
             }
         }

@@ -34,17 +34,21 @@ void loadData(items *available_items, items_data *item_data_stores_prices)
     item_data_file = fopen("Data/Varedata.txt","r");
     checkFile(item_data_file);
 
-    rewind(items_file); //resets file reader to start of file
+    //resets file reader to start of file
+    rewind(items_file);
     printf("Eksisterende varer:\n");
-    for (int i = 0; i < NUMBER_OF_ITEMS ; ++i) //loops through different products and prints them.
+    //loops through different products and prints them.
+    for (int i = 0; i < NUMBER_OF_ITEMS ; ++i)
     {
         available_items[i]= scan_item(items_file);
         printf("%s\n",available_items[i].item_name);
     }
-    for (int i = 0; i < NUMBER_OF_ITEMS*NUMBER_OF_STORES ; ++i) //loops through all products and scans product data
+    //loops through all products and scans product data
+    for (int i = 0; i < NUMBER_OF_ITEMS*NUMBER_OF_STORES ; ++i)
     {
         item_data_stores_prices[i] = scan_item_data(item_data_file);
-        //printf("%s %lf %s\n",item_data[i].item_name, item_data[i].item_price, item_data[i].item_store);
+        //printf("%s %lf %s\n",item_data[i].item_name,
+        // item_data[i].item_price, item_data[i].item_store);
     }
 }
 
