@@ -9,7 +9,7 @@ typedef struct{
 typedef struct{
     char cheapest_store[20];
     char cheapest_item[20];
-    double total;
+    double price;
 }multiple_stores;
 
 void compare_prices(char **grocery_list, int number_of_list_items, items_data *item_data);
@@ -19,6 +19,7 @@ void printPrices(void);
 void printPrices_multiple_stores(int number_of_list_items);
 void transfer_items_multiple_stores(int j, items_data *item_data);
 int cmp_fnc(const void* a, const void* b);
+double total_multiple_store_price (int number_of_list_items);
 
 individual_stores individual_store_total[NUMBER_OF_STORES]; // sets size of struct array
 multiple_stores multiple_stores_total[NUMBER_OF_ITEMS*NUMBER_OF_STORES]; // sets size of struct array
@@ -58,9 +59,9 @@ void calculate_prices(int j, items_data *item_data){
 void transfer_items_multiple_stores(int j, items_data *item_data){
     for (int k = 0; k < NUMBER_OF_ITEMS*NUMBER_OF_STORES; k++) {
         if (strcmp(multiple_stores_total[k].cheapest_item, item_data[j].item_name) == 0) {
-            if (multiple_stores_total[k].total > item_data[j].item_price)
+            if (multiple_stores_total[k].price > item_data[j].item_price)
             {
-                multiple_stores_total[k].total = item_data[j].item_price;
+                multiple_stores_total[k].price = item_data[j].item_price;
                 strcpy(multiple_stores_total[k].cheapest_store, item_data[j].item_store);
 
             }
@@ -68,7 +69,7 @@ void transfer_items_multiple_stores(int j, items_data *item_data){
         }
         if (strcmp(multiple_stores_total[k].cheapest_item, "") == 0) {
             strcpy(multiple_stores_total[k].cheapest_item, item_data[j].item_name);
-            multiple_stores_total[k].total = item_data[j].item_price;
+            multiple_stores_total[k].price = item_data[j].item_price;
             strcpy(multiple_stores_total[k].cheapest_store, item_data[j].item_store);
             break;
         }
@@ -84,10 +85,21 @@ void printPrices(void){
 void printPrices_multiple_stores(int number_of_list_items){
     for (int i = 0; i < number_of_list_items; i++) {
         printf("%-15s\t:\t%.2lf kr.\t%s\n", multiple_stores_total[i].cheapest_store,
-               multiple_stores_total[i].total, multiple_stores_total[i].cheapest_item);
+               multiple_stores_total[i].price, multiple_stores_total[i].cheapest_item);
     }
-    printf("\n");
+    printf("Total price for multiple stores are %lf\n\n", total_multiple_store_price(number_of_list_items));
 }
+
+double total_multiple_store_price (int number_of_list_items)
+{
+    double total = 0;
+    for (int i = 0; i < number_of_list_items; ++i)
+    {
+        total += multiple_stores_total[i].price;
+    }
+    return total;
+}
+
 
 int cmp_fnc(const void* a, const void* b)
 {
