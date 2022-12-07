@@ -56,6 +56,12 @@ void calculate_prices(int j, items_data *item_data){
     }
 }
 
+/**
+ * Inputs the cheapest available option to the multiple_stores_total struct array, if no item is registred an item is inputted
+ * Compares current value with new option from a different store and strcpy if new option is better
+ * @param j
+ * @param item_data
+ */
 void transfer_items_multiple_stores(int j, items_data *item_data){
     for (int k = 0; k < NUMBER_OF_ITEMS*NUMBER_OF_STORES; k++) {
         if (strcmp(multiple_stores_total[k].cheapest_item, item_data[j].item_name) == 0) {
@@ -100,7 +106,12 @@ double total_multiple_store_price (int number_of_list_items)
     return total;
 }
 
-
+/**
+ * Compare function used for qsort
+ * @param a
+ * @param b
+ * @return
+ */
 int cmp_fnc(const void* a, const void* b)
 {
     individual_stores *store1 = (individual_stores*) a;
