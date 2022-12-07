@@ -16,10 +16,14 @@ int main(void)
 
     grocery_list = malloc(sizeof(char*) * (number_of_list_items + 1));
     exit_failure(grocery_list);
+    grocery_list[0] = "first";
 
     assign_grocery_list(grocery_list, number_of_list_items);
 
-    compare_prices(grocery_list, number_of_list_items, item_data_stores_prices);
+    if (strcmp(grocery_list[0], "first") != 0)
+    {
+        compare_prices(grocery_list, number_of_list_items, item_data_stores_prices);
+    }
 
     free(grocery_list);
 
