@@ -84,6 +84,11 @@ void exit_failure (char **array)
     }
 }
 
+/**
+ * This function takes the temp_grocery_list and puts it in the grocery_list and prints said list.
+ * @param grocery_list
+ * @param number_of_list_items
+ */
 void assign_grocery_list (char **grocery_list, int number_of_list_items)
 {
 
