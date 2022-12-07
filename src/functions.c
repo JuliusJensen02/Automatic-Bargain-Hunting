@@ -157,6 +157,7 @@ int minimum_number(int arr[], int size){
     for (int i = 0; i < size; ++i) {
         if(arr[i] < min){
             index = i;
+            min = arr[i];
         }
     }
     return index;
