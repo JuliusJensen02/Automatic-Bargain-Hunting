@@ -108,7 +108,14 @@ void assign_grocery_list (char **grocery_list, int number_of_list_items)
         strcpy(grocery_list[i],temp_grocery_list[i]);
     }
 
-    print_grocery_list(grocery_list, number_of_list_items);
+    if (strcmp(grocery_list[0], "first") != 0)
+    {
+        print_grocery_list(grocery_list, number_of_list_items);
+    }
+    else
+    {
+        printf("No items in grocery list");
+    }
 
     free(temp_grocery_list);
 }
