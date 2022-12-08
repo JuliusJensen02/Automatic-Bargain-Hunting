@@ -45,6 +45,8 @@ void loadData(items *available_items, items_data *item_data_stores_prices)
     for (int i = 0; i < NUMBER_OF_ITEMS*NUMBER_OF_STORES ; ++i)
     {
         item_data_stores_prices[i] = scan_item_data(item_data_file);
+        //printf("%s %lf %s\n",item_data[i].item_name,
+        // item_data[i].item_price, item_data[i].item_store);
     }
 }
 
