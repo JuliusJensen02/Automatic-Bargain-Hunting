@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 #define NUMBER_OF_STORES 5
 #define NUMBER_OF_ITEMS 25
@@ -33,9 +34,10 @@ void loadData(items_data *item_data_stores_prices)
     printf("Available items:\n");
     for (int i = 0; i < NUMBER_OF_ITEMS ; ++i)
     {
+        item_data_stores_prices[i].item_name[0] = toupper(item_data_stores_prices[i].item_name[0]);
         printf("%s\n", item_data_stores_prices[i].item_name);
+        item_data_stores_prices[i].item_name[0] = tolower(item_data_stores_prices[i].item_name[0]);
     }
-
 }
 
 void checkFile(FILE* file){
