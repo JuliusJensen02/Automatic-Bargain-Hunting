@@ -3,15 +3,12 @@
 #include <string.h>
 #include "Headers/Data_collection.h"
 #define MAX_ITEM_SIZE 4096
-#define MIN3(a, b, c) ((a) < (b) ? ((a) < (c) ? (a) : (c)) : ((b) < (c) ? (b) : (c)))
+
 void user_input (int *number_of_list_items, items *available_items);
 void print_grocery_list(char **list, int number_of_list_items);
 void exit_failure (char **array);
 void assign_grocery_list (char **grocery_list, int number_of_list_items);
 int item_check (items *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items);
-int levenshtein(char *s1, char *s2);
-int minimum_number(int arr[], int size);
-int already_exist_item(char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items);
 
 char **temp_grocery_list;
 
@@ -37,7 +34,7 @@ void user_input (int *number_of_list_items, items *available_items)
                                         item,
                                         temp_grocery_list,
                                         *number_of_list_items);
-            if (valid_item == 0){
+            if (valid_item == 1){
                 temp_grocery_list[*number_of_list_items] = malloc(strlen(item));
                 exit_failure(temp_grocery_list);
 
@@ -47,20 +44,15 @@ void user_input (int *number_of_list_items, items *available_items)
                 printf("Number of items = %d\n",*number_of_list_items);
 
                 print_grocery_list(temp_grocery_list, *number_of_list_items);
+
+                printf("If end of grocery list, please write 'exit'. If not, write next item:\n");
             }
-            else if(valid_item >= 1){
-                strcpy(temp_grocery_list[*number_of_list_items], available_items[valid_item].item_name);
-
-                *number_of_list_items += 1;
-                printf("Number of items = %d\n",*number_of_list_items);
-
-                print_grocery_list(temp_grocery_list, *number_of_list_items);
-                printf("%s does not exist, I have autocorrected it to '%s'.\n", item, available_items[valid_item].item_name);
+            else if (valid_item == 0){
+                printf("This item does not exist in the program, please enter a new item:\n");
             }
             else{
-                printf("This item is already in the grocery list.\n");
+                printf("This item is already in the grocery list:\n");
             }
-            printf("If end of grocery list, please write 'exit'. If not, write next item:\n");
         }
     }
 }
@@ -121,62 +113,20 @@ void assign_grocery_list (char **grocery_list, int number_of_list_items)
  */
 int item_check (items *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items)
 {
-    if(already_exist_item(item, temp, number_of_list_items)){
-     return -1;
-    }
-    int distances[NUMBER_OF_ITEMS];
-    for (int i = 0; i < NUMBER_OF_ITEMS; ++i)
-    {
-        distances[i] = levenshtein(item, available_items[i].item_name);
-        if (distances[i] == 0)
-        {
-            return 0;
-        }
-    }
-    int auto_correct_index = minimum_number(distances, NUMBER_OF_ITEMS);
-    if(already_exist_item(available_items[auto_correct_index].item_name, temp, number_of_list_items)){
-        printf("%s does not exist, I have autocorrected it to '%s'.\n", item, available_items[auto_correct_index].item_name);
-        return -1;
-    }
-    return auto_correct_index;
-}
-
-int already_exist_item(char *item, char **temp, int number_of_list_items){
     for (int i = 0; i < number_of_list_items; ++i)
     {
         if (strcmp(temp[i], item) == 0)
+        {
+            return 2;
+        }
+
+    }
+    for (int i = 0; i < NUMBER_OF_ITEMS; ++i)
+    {
+        if (strcmp(available_items[i].item_name, item) == 0)
         {
             return 1;
         }
     }
     return 0;
-}
-
-int minimum_number(int arr[], int size){
-    int index = 0, min = 1000;
-    for (int i = 0; i < size; ++i) {
-        if(arr[i] < min){
-            index = i;
-        }
-    }
-    return index;
-}
-
-
-int levenshtein(char *s1, char *s2) {
-    unsigned int s1len, s2len, x, y, lastdiag, olddiag;
-    s1len = strlen(s1);
-    s2len = strlen(s2);
-    unsigned int column[s1len + 1];
-    for (y = 1; y <= s1len; y++)
-        column[y] = y;
-    for (x = 1; x <= s2len; x++) {
-        column[0] = x;
-        for (y = 1, lastdiag = x - 1; y <= s1len; y++) {
-            olddiag = column[y];
-            column[y] = MIN3(column[y] + 1, column[y - 1] + 1, lastdiag + (s1[y-1] == s2[x - 1] ? 0 : 1));
-            lastdiag = olddiag;
-        }
-    }
-    return column[s1len];
 }
