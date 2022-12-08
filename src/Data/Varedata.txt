@@ -1,125 +1,125 @@
-Smoer,75,Rema1000
-Maelk,9.5,Rema1000
-Yoghurt,15,Rema1000
-Aeg,2.7,Rema1000
-Skiveost,103.87,Rema1000
-Paere,4,Rema1000
-Aeble,2.25,Rema1000
-Hjertesalat,10,Rema1000
-Agurk,5,Rema1000
-Tomat,60,Rema1000
-Vaniljeis,40,Rema1000
-Fryseaerter,15.67,Rema1000
-Rundstykker,16,Rema1000
-Isterninger,10,Rema1000
-Frysekartofler,16.67,Rema1000
-Medisterpoelse,72.50,Rema1000
-Kyllingebryst,86.67,Rema1000
-Bacon,50,Rema1000
-Hakket oksekoed,78,Rema1000
-Hakket svinekoed,78,Rema1000
-Toiletpapir,28.11,Rema1000
-Rugbroed,25.64,Rema1000
-Pasta,9,Rema1000
-Havregryn,8,Rema1000
-Mel,6,Rema1000
-Smoer,50,Foetex
-Maelk,10.5,Foetex
-Yoghurt,15.5,Foetex
-Aeg,2,Foetex
-Skiveost,104.17,Foetex
-Paere,4.17,Foetex
-Aeble,1.88,Foetex
-Hjertesalat,14,Foetex
-Agurk,8,Foetex
-Tomat,40,Foetex
-Vaniljeis,23.95,Foetex
-Fryseaerter,17.14,Foetex
-Rundstykker,20,Foetex
-Isterninger,10,Foetex
-Frysekartofler,13.89,Foetex
-Medisterpoelse,59,Foetex
-Kyllingebryst,93.89,Foetex
-Bacon,99.67,Foetex
-Hakket oksekoed,84.29,Foetex
-Hakket svinekoed,75.90,Foetex
-Toiletpapir,29.41,Foetex
-Rugbroed,13.90,Foetex
-Pasta,10.75,Foetex
-Havregryn,9.95,Foetex
-Mel,4.48,Foetex
-Smoer,60,Netto
-Maelk,10.5,Netto
-Yoghurt,14,Netto
-Aeg,2.50,Netto
-Skiveost,105.56,Netto
-Paere,3.87,Netto
-Aeble,1.78,Netto
-Hjertesalat,10,Netto
-Agurk,7.5,Netto
-Tomat,40,Netto
-Vaniljeis,29,Netto
-Fryseaerter,16,Netto
-Rundstykker,17,Netto
-Isterninger,10,Netto
-Frysekartofler,12,Netto
-Medisterpoelse,62.50,Netto
-Kyllingebryst,110,Netto
-Bacon,63.33,Netto
-Hakket oksekoed,62.50,Netto
-Hakket svinekoed,62.50,Netto
-Toiletpapir,31,Netto
-Rugbroed,23,Netto
-Pasta,9.50,Netto
-Havregryn,9,Netto
-Mel,2.50,Netto
-Smoer,95,SuperBrugsen
-Maelk,10.50,SuperBrugsen
-Yoghurt,15,SuperBrugsen
-Aeg,1.50,SuperBrugsen
-Skiveost,110,SuperBrugsen
-Paere,3,SuperBrugsen
-Aeble,3,SuperBrugsen
-Hjertesalat,14,SuperBrugsen
-Agurk,9,SuperBrugsen
-Tomat,45,SuperBrugsen
-Vaniljeis,28,SuperBrugsen
-Fryseaerter,11,SuperBrugsen
-Rundstykker,83.33,SuperBrugsen
-Isterninger,15,SuperBrugsen
-Frysekartofler,14,Superbrugsen
-Medisterpoelse,79.95,SuperBrugsen
-Kyllingebryst,59,SuperBrugsen
-Bacon,70,SuperBrugsen
-Hakket oksekoed,72.50,SuperBrugsen
-Hakket svinekoed,150,SuperBrugsen
-Toiletpapir,26.03,SuperBrugsen
-Rugbroed,28,SuperBrugsen
-Pasta,15,SuperBrugsen
-Havregryn,12,SuperBrugsen
-Mel,6,SuperBrugsen
-Smoer,50,Lidl
-Maelk,10,Lidl
-Yoghurt,14,Lidl
-Aeg,2.13,Lidl
-Skiveost,78.67,Lidl
-Paere,2.5,Lidl
-Aeble,2.5,Lidl
-Hjertesalat,14,Lidl
-Agurk,8,Lidl
-Tomat,38,Lidl
-Vaniljeis,25,Lidl
-Fryseaerter,10,Lidl
-Rundstykker,20,Lidl
-Isterninger,15,Lidl
-Frysekartofler,11.50,Lidl
-Medisterpoelse,65,Lidl
-Kyllingebryst,89.30,Lidl
-Bacon,64.95,Lidl
-Hakket oksekoed,70,Lidl
-Hakket svinekoed,49,Lidl
-Toiletpapir,29.95,Lidl
-Rugbroed,24,Lidl
-Pasta,14,Lidl
-Havregryn,11,Lidl
-Mel,5.50,Lidl
+butter,75,Rema1000
+milk,9.5,Rema1000
+yogurt,15,Rema1000
+egg,2.7,Rema1000
+sliced cheese,103.87,Rema1000
+pear,4,Rema1000
+apple,2.25,Rema1000
+romaine lettuce,10,Rema1000
+cucumber,5,Rema1000
+tomato,60,Rema1000
+vanilla ice cream,40,Rema1000
+frozen peas,15.67,Rema1000
+breakfast rolls,16,Rema1000
+ice cubes,10,Rema1000
+frozen potatos,16.67,Rema1000
+white sausage,72.50,Rema1000
+chicken breast,86.67,Rema1000
+bacon,50,Rema1000
+minced beef,78,Rema1000
+minced pork,78,Rema1000
+toiletpaper,28.11,Rema1000
+rye bread,25.64,Rema1000
+pasta,9,Rema1000
+oats,8,Rema1000
+flour,6,Rema1000
+butter,50,Foetex
+milk,10.5,Foetex
+yogurt,15.5,Foetex
+egg,2,Foetex
+sliced cheese,104.17,Foetex
+pear,4.17,Foetex
+apple,1.88,Foetex
+romaine lettuce,14,Foetex
+cucumber,8,Foetex
+tomato,40,Foetex
+vanilla ice cream,23.95,Foetex
+frozen peas,17.14,Foetex
+breakfast rolls,20,Foetex
+ice cubes,10,Foetex
+frozen potatos,13.89,Foetex
+white sausage,59,Foetex
+chicken breast,93.89,Foetex
+bacon,99.67,Foetex
+minced beef,84.29,Foetex
+minced pork,75.90,Foetex
+toiletpaper,29.41,Foetex
+rye bread,13.90,Foetex
+pasta,10.75,Foetex
+oats,9.95,Foetex
+flour,4.48,Foetex
+butter,60,Netto
+milk,10.5,Netto
+yogurt,14,Netto
+egg,2.50,Netto
+sliced cheese,105.56,Netto
+pear,3.87,Netto
+apple,1.78,Netto
+romaine lettuce,10,Netto
+cucumber,7.5,Netto
+tomato,40,Netto
+vanilla ice cream,29,Netto
+frozen peas,16,Netto
+breakfast rolls,17,Netto
+ice cubes,10,Netto
+frozen potatos,12,Netto
+white sausage,62.50,Netto
+chicken breast,110,Netto
+bacon,63.33,Netto
+minced beef,62.50,Netto
+minced pork,62.50,Netto
+toiletpaper,31,Netto
+rye bread,23,Netto
+pasta,9.50,Netto
+oats,9,Netto
+flour,2.50,Netto
+butter,95,SuperBrugsen
+milk,10.50,SuperBrugsen
+yogurt,15,SuperBrugsen
+egg,1.50,SuperBrugsen
+sliced cheese,110,SuperBrugsen
+pear,3,SuperBrugsen
+apple,3,SuperBrugsen
+romaine lettuce,14,SuperBrugsen
+cucumber,9,SuperBrugsen
+tomato,45,SuperBrugsen
+vanilla ice cream,28,SuperBrugsen
+frozen peas,11,SuperBrugsen
+breakfast rolls,83.33,SuperBrugsen
+ice cubes,15,SuperBrugsen
+frozen potatos,14,Superbrugsen
+white sausage,79.95,SuperBrugsen
+chicken breast,59,SuperBrugsen
+bacon,70,SuperBrugsen
+minced beef,72.50,SuperBrugsen
+minced pork,150,SuperBrugsen
+toiletpaper,26.03,SuperBrugsen
+rye bread,28,SuperBrugsen
+pasta,15,SuperBrugsen
+oats,12,SuperBrugsen
+flour,6,SuperBrugsen
+butter,50,Lidl
+milk,10,Lidl
+yogurt,14,Lidl
+egg,2.13,Lidl
+sliced cheese,78.67,Lidl
+pear,2.5,Lidl
+apple,2.5,Lidl
+romaine lettuce,14,Lidl
+cucumber,8,Lidl
+tomato,38,Lidl
+vanilla ice cream,25,Lidl
+frozen peas,10,Lidl
+breakfast rolls,20,Lidl
+ice cubes,15,Lidl
+frozen potatos,11.50,Lidl
+white sausage,65,Lidl
+chicken breast,89.30,Lidl
+bacon,64.95,Lidl
+minced beef,70,Lidl
+minced pork,49,Lidl
+toiletpaper,29.95,Lidl
+rye bread,24,Lidl
+pasta,14,Lidl
+oats,11,Lidl
+flour,5.50,Lidl
