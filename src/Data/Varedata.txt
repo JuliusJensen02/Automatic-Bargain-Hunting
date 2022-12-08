@@ -18,7 +18,7 @@ chicken breast,86.67,Rema1000
 bacon,50,Rema1000
 minced beef,78,Rema1000
 minced pork,78,Rema1000
-toiletpaper,28.11,Rema1000
+toilet paper,28.11,Rema1000
 rye bread,25.64,Rema1000
 pasta,9,Rema1000
 oats,8,Rema1000
@@ -43,7 +43,7 @@ chicken breast,93.89,Foetex
 bacon,99.67,Foetex
 minced beef,84.29,Foetex
 minced pork,75.90,Foetex
-toiletpaper,29.41,Foetex
+toilet paper,29.41,Foetex
 rye bread,13.90,Foetex
 pasta,10.75,Foetex
 oats,9.95,Foetex
@@ -68,7 +68,7 @@ chicken breast,110,Netto
 bacon,63.33,Netto
 minced beef,62.50,Netto
 minced pork,62.50,Netto
-toiletpaper,31,Netto
+toilet paper,31,Netto
 rye bread,23,Netto
 pasta,9.50,Netto
 oats,9,Netto
@@ -93,7 +93,7 @@ chicken breast,59,SuperBrugsen
 bacon,70,SuperBrugsen
 minced beef,72.50,SuperBrugsen
 minced pork,150,SuperBrugsen
-toiletpaper,26.03,SuperBrugsen
+toilet paper,26.03,SuperBrugsen
 rye bread,28,SuperBrugsen
 pasta,15,SuperBrugsen
 oats,12,SuperBrugsen
@@ -118,7 +118,7 @@ chicken breast,89.30,Lidl
 bacon,64.95,Lidl
 minced beef,70,Lidl
 minced pork,49,Lidl
-toiletpaper,29.95,Lidl
+toilet paper,29.95,Lidl
 rye bread,24,Lidl
 pasta,14,Lidl
 oats,11,Lidl
