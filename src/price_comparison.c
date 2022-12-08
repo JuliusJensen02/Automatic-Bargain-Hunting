@@ -1,5 +1,6 @@
 #include "Headers/Data_collection.h"
 #include "Headers/Function.h"
+#include <ctype.h>
 
 typedef struct{
     char store[20];
@@ -101,17 +102,22 @@ void transfer_items_multiple_stores(int j, items_data *item_data){
 
 void printPrices(void){
 
+    printf("Total cheapest store is:\n\n");
     for (int i = 0; i < NUMBER_OF_STORES; i++) {
         printf("%-15s\t:\t%.2lf kr.\n", individual_store_total[i].store, individual_store_total[i].total);
     }
+    printf("___________________________________________________________\n");
 }
 
 void printPrices_multiple_stores(int number_of_list_items){
+
+    printf("These items are cheapest in the following stores:\n\n");
     for (int i = 0; i < number_of_list_items; i++) {
+        multiple_stores_total[i].cheapest_item[0] = toupper(multiple_stores_total[i].cheapest_item[0]);
         printf("%-15s\t:\t%.2lf kr.\t%s\n", multiple_stores_total[i].cheapest_store,
                multiple_stores_total[i].price, multiple_stores_total[i].cheapest_item);
     }
-    printf("Total price for multiple stores are %lf\n\n", total_multiple_store_price(number_of_list_items));
+    printf("___________________________________________________________\n");
 }
 
 /**

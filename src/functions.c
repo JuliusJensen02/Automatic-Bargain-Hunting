@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "Headers/Data_collection.h"
 #define MAX_ITEM_SIZE 4096
 
-void user_input (int *number_of_list_items, items *available_items);
+void user_input (int *number_of_list_items, items_data *available_items);
 void print_grocery_list(char **list, int number_of_list_items);
 void exit_failure (char **array);
 void assign_grocery_list (char **grocery_list, int number_of_list_items);
-int item_check (items *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items);
+int item_check (items_data *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items);
 
 char **temp_grocery_list;
 
 /**
  * The main function to accept the users input. It also inputs the grocery items into a grocery list.
  */
-void user_input (int *number_of_list_items, items *available_items)
+void user_input (int *number_of_list_items, items_data *available_items)
 {
     char item[MAX_ITEM_SIZE];
     printf("Please write the items you want to find one by one:");
@@ -29,6 +30,11 @@ void user_input (int *number_of_list_items, items *available_items)
         fgets(item,MAX_ITEM_SIZE, stdin);
         item[strlen(item)- 1] = '\0'; //replaces the '\n' with '\0'
 
+        for (int i = 0; i < strlen(item); ++i)
+        {
+            item[i] = tolower(item[i]);
+        }
+
         if(strcmp(item, "exit") != 0){
             int valid_item = item_check(available_items,
                                         item,
@@ -41,14 +47,13 @@ void user_input (int *number_of_list_items, items *available_items)
                 strcpy(temp_grocery_list[*number_of_list_items], item);
 
                 *number_of_list_items += 1;
-                printf("Number of items = %d\n",*number_of_list_items);
 
                 print_grocery_list(temp_grocery_list, *number_of_list_items);
 
-                printf("If end of grocery list, please write 'exit'. If not, write next item:\n");
+                printf("If end of grocery list, please write 'exit'. If not, write next item:");
             }
             else if (valid_item == 0){
-                printf("This item does not exist in the program, please enter a new item:\n");
+                printf("This item does not exist in the program.\nPlease enter a new item:\n");
             }
             else{
                 printf("This item is already in the grocery list:\n");
@@ -63,11 +68,15 @@ void user_input (int *number_of_list_items, items *available_items)
  */
 void print_grocery_list(char **list, int number_of_list_items)
 {
+    printf("___________________________________________________________");
+    printf("\nGrocery list:\n");
     for (int i = 0; i < number_of_list_items; ++i)
     {
-        printf("%s\n",list[i]);
+        list[i][0] = toupper(list[i][0]);
+        printf("   %d. %s\n", i+1, list[i]);
+        list[i][0] = tolower(list[i][0]);
     }
-    printf("\n");
+    printf("___________________________________________________________\n");
 }
 
 /**
@@ -99,7 +108,6 @@ void assign_grocery_list (char **grocery_list, int number_of_list_items)
         strcpy(grocery_list[i],temp_grocery_list[i]);
     }
 
-    printf("Final Grocery List:\n");
     print_grocery_list(grocery_list, number_of_list_items);
 
     free(temp_grocery_list);
@@ -111,7 +119,7 @@ void assign_grocery_list (char **grocery_list, int number_of_list_items)
  * @param item the inputted item
  * @return
  */
-int item_check (items *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items)
+int item_check (items_data *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items)
 {
     for (int i = 0; i < number_of_list_items; ++i)
     {
