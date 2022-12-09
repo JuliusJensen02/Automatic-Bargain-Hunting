@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "Headers/Data_collection.h"
-#define MAX_ITEM_SIZE 4096
+#include "Headers/data_collection.h"
+#define MAX_INPUT_SIZE 4096
 
 void user_input (int *number_of_list_items, items_data *available_items);
 void print_grocery_list(char **list, int number_of_list_items);
 void exit_failure (char **array);
 void assign_grocery_list (char **grocery_list, int number_of_list_items);
-int item_check (items_data *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items);
+int item_check (items_data *available_items, char item[MAX_INPUT_SIZE], int number_of_list_items);
 
 char **temp_grocery_list;
 
@@ -18,7 +18,7 @@ char **temp_grocery_list;
  */
 void user_input (int *number_of_list_items, items_data *available_items)
 {
-    char item[MAX_ITEM_SIZE];
+    char item[MAX_INPUT_SIZE];
     printf("Please write the items you want to find one by one:");
 
     temp_grocery_list = malloc(sizeof(char*) * 100);
@@ -27,7 +27,7 @@ void user_input (int *number_of_list_items, items_data *available_items)
     while (strcmp(item, "exit") != 0)
     {
         //fgets is the way the program accepts an input from the user
-        fgets(item,MAX_ITEM_SIZE, stdin);
+        fgets(item,MAX_INPUT_SIZE, stdin);
         item[strlen(item)- 1] = '\0'; //replaces the '\n' with '\0'
 
         for (int i = 0; i < strlen(item); ++i)
@@ -38,7 +38,6 @@ void user_input (int *number_of_list_items, items_data *available_items)
         if(strcmp(item, "exit") != 0){
             int valid_item = item_check(available_items,
                                         item,
-                                        temp_grocery_list,
                                         *number_of_list_items);
             if (valid_item == 1){
                 temp_grocery_list[*number_of_list_items] = malloc(strlen(item));
@@ -102,7 +101,7 @@ void assign_grocery_list (char **grocery_list, int number_of_list_items)
 
     for (int i = 0; i < number_of_list_items; ++i)
     {
-        grocery_list[i] = malloc(MAX_ITEM_SIZE);
+        grocery_list[i] = malloc(strlen(temp_grocery_list[i]));
         exit_failure(grocery_list);
 
         strcpy(grocery_list[i],temp_grocery_list[i]);
@@ -126,11 +125,11 @@ void assign_grocery_list (char **grocery_list, int number_of_list_items)
  * @param item the inputted item
  * @return
  */
-int item_check (items_data *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items)
+int item_check (items_data *available_items, char item[MAX_INPUT_SIZE], int number_of_list_items)
 {
     for (int i = 0; i < number_of_list_items; ++i)
     {
-        if (strcmp(temp[i], item) == 0)
+        if (strcmp(temp_grocery_list[i], item) == 0)
         {
             return 2;
         }

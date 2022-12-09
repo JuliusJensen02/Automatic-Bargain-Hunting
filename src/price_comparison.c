@@ -1,5 +1,5 @@
-#include "Headers/Data_collection.h"
-#include "Headers/Function.h"
+#include "Headers/data_collection.h"
+#include "Headers/user_input.h"
 #include <ctype.h>
 
 typedef struct{

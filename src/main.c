@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "Headers/Data_collection.h"
-#include "Headers/Function.h"
-#include "Headers/Comparison.h"
+#include "Headers/data_collection.h"
+#include "Headers/user_input.h"
+#include "Headers/price_comparison.h"
 
 items_data      item_data_stores_prices[NUMBER_OF_ITEMS*NUMBER_OF_STORES]; // sets size of struct array
 int             number_of_list_items = 0;

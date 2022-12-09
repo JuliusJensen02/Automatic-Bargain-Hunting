@@ -5,8 +5,8 @@ set(CMAKE_C_STANDARD 11)
 
 
 
-add_library(Data_collection src/Data_collection.c)
-add_library(Function        src/functions.c)
+add_library(Data_collection src/data_collection.c)
+add_library(Function src/user_input.c)
 add_library(Comparison      src/price_comparison.c)
 
 
