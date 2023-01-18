@@ -12,7 +12,7 @@ void assign_grocery_list (char **grocery_list, int number_of_list_items);
 int item_check (items *available_items, char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items);
 int levenshtein(char *s1, char *s2);
 int minimum_number(const int *arr);
-int already_exist_item(char item[MAX_ITEM_SIZE], char **temp, int number_of_list_items);
+int already_exist_item(char *item, char **temp, int number_of_list_items);
 
 char **temp_grocery_list;
 
@@ -109,43 +109,73 @@ int item_check(items *available_items, char item[MAX_ITEM_SIZE], char **temp, in
         itemFiltered[j] = tolower(item[j]);
     }
     for(i = 0; i < NUMBER_OF_ITEMS; ++i){
-        char *product;
+        char *product = malloc(MAX_ITEM_SIZE);
         strcpy(product, available_items[i].item_name);
         product[0] = tolower(product[0]);
         distances[i] = levenshtein(item, product);
+        free(product);
         if(distances[i] == 0){
             break;
         }
     }
     int auto_correct_index = minimum_number(distances); //Finds index of the smallest distance
-    char firstCharProduct = tolower(available_items[auto_correct_index].item_name[0]);
-    if(already_exist_item(available_items[auto_correct_index].item_name, temp, number_of_list_items)){
-        printf("This item is already in the grocery list.\n");
+    char *match = malloc(MAX_ITEM_SIZE);
+    strcpy(match, available_items[auto_correct_index].item_name);
+    match[0] = tolower(match[0]);
+
+    //if exists in list
+    if(already_exist_item(itemFiltered, temp, number_of_list_items)){
+        printf("\nThis item is already in the grocery list.\n");
+        free(match);
         return -1;
     }
-    if(itemFiltered[0] == firstCharProduct && distances[auto_correct_index] < 3){
-        printf("I could not find '%s', is it ok that I correct it to %s? Yes(y) No (n)\n", item, available_items[auto_correct_index].item_name);
+    //else if is found (without levenshtein)
+    else if(strcmp(item, match) == 0){
+        free(match);
+        return auto_correct_index;
+    }
+    //else if is found (with levenshtein)
+    else if(itemFiltered[0] == match[0] && distances[auto_correct_index] < 3){
+        printf("\nI could not find '%s', did you mean '%s'? Yes(y) No (n)\n", item, match);
         char check;
         scanf("%c", &check);
+
         //Accept autocorrect
         if(check == 'y' || check == 'Y'){
-            return auto_correct_index;
+            if(already_exist_item(match, temp, number_of_list_items)){
+                printf("\nThis item is already in the grocery list.\n");
+                free(match);
+                return -1;
+            }
+            else{
+                free(match);
+                return auto_correct_index;
+            }
         }
+        //not accept
         else{
+            free(match);
             return -1;
         }
     }
+    //else could not find
     else{
-        printf("I couldn't find that item\n");
+        printf("\nI could not find that item\n");
+        free(match);
         return -1;
     }
 }
 
 int already_exist_item(char *item, char **temp, int number_of_list_items){
     for (int i = 0; i < number_of_list_items; ++i){
-        if (strcmp(temp[i], item) == 0){
+        char *tempItem = malloc(MAX_ITEM_SIZE);
+        strcpy(tempItem, temp[i]);
+        tempItem[0] = tolower(tempItem[0]);
+        if (strcmp(tempItem, item) == 0){
+            free(tempItem);
             return 1;
         }
+        free(tempItem);
     }
     return 0;
 }
