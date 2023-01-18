@@ -127,6 +127,7 @@ int item_check(items *available_items, char item[MAX_ITEM_SIZE], char **temp, in
         printf("I could not find '%s', is it ok that I correct it to %s? Yes(y) No (n)\n", item, available_items[auto_correct_index].item_name);
         char check;
         scanf("%c", &check);
+        //Accept autocorrect
         if(check == 'y' || check == 'Y'){
             return auto_correct_index;
         }
