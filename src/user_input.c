@@ -114,10 +114,8 @@ int item_check(items_data *available_items, char item[MAX_ITEM_SIZE], char **tem
         product[0] = tolower(product[0]);
         distances[i] = levenshtein(item, product);
         free(product);
-        if(distances[i] == 0){
-            break;
-        }
     }
+
     int auto_correct_index = minimum_number(distances); //Finds index of the smallest distance
     char *match = malloc(MAX_ITEM_SIZE);
     strcpy(match, available_items[auto_correct_index].item_name);
