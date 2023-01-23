@@ -138,5 +138,9 @@ int cmp_fnc(const void* a, const void* b)
     individual_stores *store1 = (individual_stores*) a;
     individual_stores *store2 = (individual_stores*) b;
 
-    return (store1->total - store2->total);
+
+    if (a > b) return 1;
+    else if (a < b) return -1;
+    else return 0;
+
 }
