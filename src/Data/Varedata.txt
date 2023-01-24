@@ -12,7 +12,7 @@ vanilla ice cream,40,Rema1000
 frozen peas,15.67,Rema1000
 breakfast rolls,16,Rema1000
 ice cubes,10,Rema1000
-frozen potatos,16.67,Rema1000
+frozen potatoes,16.67,Rema1000
 white sausage,72.50,Rema1000
 chicken breast,86.67,Rema1000
 bacon,50,Rema1000
@@ -37,7 +37,7 @@ vanilla ice cream,23.95,Foetex
 frozen peas,17.14,Foetex
 breakfast rolls,20,Foetex
 ice cubes,10,Foetex
-frozen potatos,13.89,Foetex
+frozen potatoes,13.89,Foetex
 white sausage,59,Foetex
 chicken breast,93.89,Foetex
 bacon,99.67,Foetex
@@ -62,7 +62,7 @@ vanilla ice cream,29,Netto
 frozen peas,16,Netto
 breakfast rolls,17,Netto
 ice cubes,10,Netto
-frozen potatos,12,Netto
+frozen potatoes,12,Netto
 white sausage,62.50,Netto
 chicken breast,110,Netto
 bacon,63.33,Netto
@@ -87,7 +87,7 @@ vanilla ice cream,28,SuperBrugsen
 frozen peas,11,SuperBrugsen
 breakfast rolls,83.33,SuperBrugsen
 ice cubes,15,SuperBrugsen
-frozen potatos,14,Superbrugsen
+frozen potatoes,14,SuperBrugsen
 white sausage,79.95,SuperBrugsen
 chicken breast,59,SuperBrugsen
 bacon,70,SuperBrugsen
@@ -112,7 +112,7 @@ vanilla ice cream,25,Lidl
 frozen peas,10,Lidl
 breakfast rolls,20,Lidl
 ice cubes,15,Lidl
-frozen potatos,11.50,Lidl
+frozen potatoes,11.50,Lidl
 white sausage,65,Lidl
 chicken breast,89.30,Lidl
 bacon,64.95,Lidl
